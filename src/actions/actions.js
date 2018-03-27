@@ -1,9 +1,9 @@
-import { ADD_HERO } from "../actionTypes/index";
+import { ADD_HERO, UPDATE_HERO } from "../actionTypes/index"
 
-function showDashboard(state = [], action) {
-    return state;
+export function addHero(hero) {
+    return { type: ADD_HERO, hero }
 }
 
-function showHeroList(state = [], action) {
-    return state;
+export function updateHero(hero) {
+    return { type: UPDATE_HERO, hero }
 }

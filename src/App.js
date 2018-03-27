@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
-import { Route } from 'react-router';
-import Dashboard from './components/Dashboard';
-import Heroes from './components/Heroes';
-import Welcome from './components/Welcome';
-import './App.css';
+import React, { Component } from 'react'
+import { Link, BrowserRouter as Router } from 'react-router-dom'
+import { Route } from 'react-router'
+import Dashboard from './containers/Dashboard'
+import Heroes from './containers/Heroes'
+import './App.css'
 
 export default class App extends Component {
   render() {
@@ -15,12 +14,11 @@ export default class App extends Component {
             <h1>
               Hero Editor
             </h1>
-            <Link to="heroes">Heroes</Link>
-            <Link to="dashboard">Dashboard</Link>
+            <Link to="/heroes">Heroes</Link>
+            <Link to="/">Dashboard</Link>
           </nav>
           <div>
-            <Route exact path="/" component={Welcome}/>
-            <Route path="/dashboard" component={Dashboard}/>
+            <Route exact path="/" component={Dashboard}/>
             <Route path="/heroes" component={Heroes}/>
           </div>
         </div>

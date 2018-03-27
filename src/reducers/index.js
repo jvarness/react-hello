@@ -1,4 +1,4 @@
 import { combineReducers} from 'redux';
-import hero from './hero';
+import heroes from './hero';
 
-export default combineReducers({hero});
+export default combineReducers({heroes})
